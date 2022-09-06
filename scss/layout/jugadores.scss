@@ -1,0 +1,31 @@
+.cantidadJugadores {
+    display: flex;
+    flex-direction: column;
+    @extend%medidasBase;
+    background-image:url(../../imagenFondo/kunj-parekh-H69EgivmCjE-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+
+    p {
+        font-size: large;
+        font-weight: 500;
+        text-align: center;
+        margin: 3rem;
+        margin-top: 6rem;
+
+    }
+
+    .botones {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       #jugadores2{
+        margin-bottom: 1rem;
+       }
+    }
+
+
+}
+
+
