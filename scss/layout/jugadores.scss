@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     @extend%medidasBase;
-    background-image:url(../../imagenFondo/kunj-parekh-H69EgivmCjE-unsplash.jpg);
+    background-image: url(../../imagenFondo/kunj-parekh-H69EgivmCjE-unsplash.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 
@@ -20,12 +20,38 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-       #jugadores2{
-        margin-bottom: 1rem;
-       }
+
+        #jugadores2 {
+            margin-bottom: 1rem;
+        }
     }
-
-
 }
 
+#nombres {
+    display: none;
+    width: 100%;
 
+    .col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -32rem;
+        width: 100%;
+
+        .ingresarNombres {
+            width: 19rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
+            font-size: large;
+        }
+
+        .form-control {
+            width: 30vw;
+
+        }
+
+        .aceptar {
+            margin-top: 1rem;
+        }
+    }
+}

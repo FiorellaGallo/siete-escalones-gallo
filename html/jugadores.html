@@ -10,14 +10,22 @@
 </head>
 <body>
     <!--MAIN/Selector de cantidad de jugadores-->
-    <div   class="cantidadJugadores">
-        <div id="ocultar">
+    <div   class="cantidadJugadores"  >
+        <div id="botonJugadores">
         <p>Selecciona la cantidad de jugadores</p>
         <div class="botones">
             <button id="jugadores2" value="2" type="button" class="btn btn-dark" >2 JUGADORES</button>
             <button id="jugadores3" value="3" type="button" class="btn btn-dark" >3 JUGADORES</button>
         </div>
     </div>
+    </div>
+
+    <div class="row" id="nombres" >
+        <div class="col">
+            <p class="ingresarNombres">Ingrese el nombre de los jugadores :</p>
+                <div id="divInput"></div>
+            <button type="button" class=" aceptar btn btn-warning" id="aceptar">Aceptar</button>
+        </div>
     </div>
 
     <script src="../class.js"></script>

@@ -1,18 +1,25 @@
+let cantidadParticipantes= 0;
 let jugadores2 = document.getElementById("jugadores2");
 
 jugadores2.addEventListener("click", (event) => {
-    
-    participara(event); 
+    cantidadParticipantes= 2;
+    escribirNombres();
+    participara(event);
 });
 
 
 let jugadores3 = document.getElementById("jugadores3");
 
 jugadores3.addEventListener("click", (event) => {
-    
+    cantidadParticipantes= 3;
+    escribirNombres();
     participara(event);
 });
 
+function escribirNombres() {
+    document.getElementById('nombres').style.display = 'block';
+    document.getElementById('botonJugadores').style.display = 'none';
+}
 
 let jugadores;
 let arrayJugadores = Array();
@@ -21,20 +28,26 @@ let arrayPreguntas = retornarPregunta();
 function participara(event) {
 
     for (let index = 1; index <= event.target.value; index++) {
-        const nombre = ingresarNombre(index);
-        const jugador = new Jugador(nombre, index, undefined, 0);
-        arrayJugadores.push(jugador);
-        console.log(index);
+        const divInput = document.getElementById('divInput');
+        const div = document.createElement('div');
+        divInput.appendChild(div);
+        div.innerHTML = `<input type="text" id="jugador${index}" class="form-control" placeholder="${index}º jugador" aria-label="Nombre">`;
     }
+    let aceptar = document.getElementById("aceptar");
+
+    aceptar.addEventListener("click", () => {
+
+        for (let index = 1; index <= cantidadParticipantes; index++){
+            const input= document.getElementById(`jugador${index}`)
+            const jugador = new Jugador(input.value, index, undefined, 0);
+            arrayJugadores.push(jugador);    
+        }
+
+    });
+
     console.log(arrayJugadores);
-    iniciarJuego();
+    // iniciarJuego();
 }
-
-
-function ingresarNombre(numeroJugador) {
-   return prompt(`Ingrese nombre del jugador ${numeroJugador}`);
-}
-
 
 //Iteración de los escalones
 
