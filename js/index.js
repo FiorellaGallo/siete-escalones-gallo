@@ -36,22 +36,22 @@ function participara(event) {
     let aceptar = document.getElementById("aceptar");
 
     aceptar.addEventListener("click", () => {
-
+        
         for (let index = 1; index <= cantidadParticipantes; index++){
             const input= document.getElementById(`jugador${index}`)
             const jugador = new Jugador(input.value, index, undefined, 0);
             arrayJugadores.push(jugador);    
         }
+        //iniciarJuego()
 
     });
 
     console.log(arrayJugadores);
-    // iniciarJuego();
+    
 }
 
-//Iteración de los escalones
 
-function iniciarJuego() {
+/*function iniciarJuego() {
     let escalon = 0;
     let unaRespuestaCorrecta = false;
 
@@ -104,6 +104,8 @@ function iniciarJuego() {
         }
     });
 }
+
+*/
 
 
 

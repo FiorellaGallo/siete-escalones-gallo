@@ -1,0 +1,73 @@
+.contenedor{
+    
+    display: flex;
+    flex-direction: column;
+    @extend%medidasBase;
+    background-image: url(../../imagenFondo/fondo-3.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    
+
+    .encabezado{
+        
+      
+        background-color: rgba(21, 21, 21, 0.656);
+        color: white;
+        max-width: 35rem;
+        height: 24rem;
+        justify-content: center;
+        margin-top: 4rem;
+        margin-left: 25%;
+        box-shadow: 1rem 1rem 3rem rgba(59, 59, 59, 0.615);
+        border-radius: 0.5rem;
+
+        .escalonCero{
+            margin-top: 2rem;
+            margin-left: 2rem;
+            text-align: left;
+        }
+
+        .jugador{
+         margin-right: 2rem;
+           text-align: right;
+           margin-top: -2rem;
+          
+        }
+
+        .pregunta{
+            margin-top: 2rem;
+          margin-bottom: 3rem;  
+           
+           
+        }
+
+        .opciones{
+            margin-left: 2rem;
+            margin-right: 2rem;
+            flex-direction: column;
+            justify-content: center;
+            color: rgb(24, 24, 24);
+            
+            #opcion1{
+                background-color: #c4c6c6 ;
+                @extend%opciones;  
+            }
+
+            #opcion2{
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+                background-color: #999b9be6 ;
+                @extend%opciones;
+            }
+
+            #opcion3{
+                background-color: #c4c6c6 ;
+                @extend%opciones;   
+            }  
+        }
+  
+    }
+}

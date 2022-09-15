@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     @extend%medidasBase;
-    background-image: url(../../imagenFondo/kunj-parekh-H69EgivmCjE-unsplash.jpg);
+    background-image: url(../../imagenFondo/fondo-2.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 
@@ -25,6 +25,20 @@
             margin-bottom: 1rem;
         }
     }
+
+   
+}
+
+.salida{
+        
+   margin-top: -5rem;
+    margin-left: 3rem;
+    
+    .boton{
+        margin-top: -10rem;
+        text-decoration: none;
+        color: rgb(9, 8, 8);    
+    }     
 }
 
 #nombres {
@@ -47,11 +61,15 @@
 
         .form-control {
             width: 30vw;
-
         }
 
-        .aceptar {
+        #aceptar {
             margin-top: 1rem;
+            .aceptar{ 
+            color: rgb(9, 8, 8);
+            text-decoration: none;
+        }
         }
     }
 }
+
