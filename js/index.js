@@ -44,7 +44,6 @@ function participara(event) {
             localStorage.setItem("jugadores", JSON.stringify (arrayJugadores));
         }
         
-
     });
 
     console.log(arrayJugadores);

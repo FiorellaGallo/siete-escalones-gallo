@@ -1,27 +1,28 @@
 let preguntas = retornarPregunta();
 let min = 0;
 let max = preguntas.length - 1;
-let numeroPregunta = Math.floor(Math.random() * (max - min + 1) + min);
-let preguntaActual = preguntas[numeroPregunta];
+let numeroPregunta = Math.floor(Math.random() * (max - min + 1) + min); // genero numero aleatorio
 let jugadores = localStorage.getItem("jugadores");
 jugadores = JSON.parse(jugadores);
 localStorage.setItem("escalon", 0);
 let escalonNum = 0;
 
 window.addEventListener("load", function () {
+    const{pregunta,opciones,respuesta} = preguntas[numeroPregunta]; // accedo por posiciòn dentro array que contiene los objetos pregunta
     let escalon = document.getElementById("escalon");
     escalon.innerHTML = `Escalón : ${escalonNum} `;
 
     localStorage.setItem("jugadorActual", 1);
 
     let jugadorhtml = document.getElementById("jugador");
-    jugadorhtml.innerText = `Jugador :${jugadores[0].nombreJugador}`;
+    const {nombreJugador } = jugadores[0];
+    jugadorhtml.innerText = `Jugador :${nombreJugador}`;
 
     const tituloPregunta = document.querySelector("#pregunta");
-    tituloPregunta.innerHTML = preguntaActual.pregunta;
+    tituloPregunta.innerHTML = pregunta;
 
     const opcion1 = document.querySelector("#opcion1");
-    const arrayOpciones = preguntaActual.opciones.split(/\r?\n/);
+    const arrayOpciones = opciones.split(/\r?\n/);
     opcion1.innerHTML = arrayOpciones[0];
 
     const opcion2 = document.querySelector("#opcion2");
@@ -35,7 +36,7 @@ window.addEventListener("load", function () {
     respuesta1.addEventListener("click", (event) => {
         let jugador = jugadores[localStorage.getItem("jugadorActual") - 1];
 
-        if ("a" == preguntaActual.respuesta) {
+        if ("a" == respuesta) {
             respuesta1.style.background = "green";
             jugador.preguntaAnterior = true;
         } else {
@@ -51,7 +52,7 @@ window.addEventListener("load", function () {
     respuesta2.addEventListener("click", (event) => {
         let jugador = jugadores[localStorage.getItem("jugadorActual") - 1];
 
-        if ("b" == preguntaActual.respuesta) {
+        if ("b" == respuesta) {
             respuesta2.style.background = "green";
             jugador.preguntaAnterior = true;
         } else {
@@ -67,7 +68,7 @@ window.addEventListener("load", function () {
     respuesta3.addEventListener("click", (event) => {
         let jugador = jugadores[localStorage.getItem("jugadorActual") - 1];
 
-        if ("c" == preguntaActual.respuesta) {
+        if ("c" == respuesta) {
             respuesta3.style.background = "green";
             jugador.preguntaAnterior = true;
         } else {
@@ -138,11 +139,11 @@ function recargarPregunta(nombreJugador, numero) {
     let min = 0;
     let max = preguntas.length - 1;
     numeroPregunta = Math.floor(Math.random() * (max - min + 1) + min);
-    preguntaActual = preguntas[numeroPregunta];
+    const{pregunta,opciones} = preguntas[numeroPregunta];
     const tituloPregunta = document.querySelector("#pregunta");
-    tituloPregunta.innerHTML = preguntaActual.pregunta;
+    tituloPregunta.innerHTML = pregunta;
 
-    const arrayOpciones = preguntaActual.opciones.split(/\r?\n/);
+    const arrayOpciones = opciones.split(/\r?\n/);
     opcion1.innerHTML = arrayOpciones[0];
 
     opcion2.innerHTML = arrayOpciones[1];
