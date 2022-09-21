@@ -6,7 +6,7 @@
 .contenedor .encabezado .opciones #opcion1, .contenedor .encabezado .opciones #opcion2, .contenedor .encabezado .opciones #opcion3 {
   padding: 0.5rem; }
   .contenedor .encabezado .opciones #opcion1:hover, .contenedor .encabezado .opciones #opcion2:hover, .contenedor .encabezado .opciones #opcion3:hover {
-    background-color: rgba(255, 255, 0, 0.909);
+    background-color: #e4a010;
     cursor: pointer;
     transform: scale(1.05);
     transition: 0.3s; }
@@ -22,7 +22,7 @@
   object-fit: cover; }
   .fondo h1 {
     font-weight: 400;
-    font-size: 4rem;
+    font-size: 6rem;
     font-family: 'Figtree', sans-serif;
     text-align: center;
     color: rgba(32, 31, 31, 0.822);
@@ -30,8 +30,8 @@
     padding-right: 50%;
     box-shadow: 0px 0px 30px black; }
   .fondo .boton {
-    font-size: 2.5rem;
-    margin: 10rem; }
+    font-size: 3rem;
+    margin: 15rem; }
     .fondo .boton .init {
       color: white;
       text-decoration: none; }
@@ -43,17 +43,20 @@
   background-repeat: no-repeat;
   background-size: 100% 100%; }
   .cantidadJugadores p {
-    font-size: large;
+    font-size: 1.5rem;
     font-weight: 500;
     text-align: center;
     margin: 3rem;
-    margin-top: 6rem; }
+    margin-top: 10rem; }
   .cantidadJugadores .botones {
     display: flex;
     flex-direction: column;
     align-items: center; }
     .cantidadJugadores .botones #jugadores2 {
-      margin-bottom: 1rem; }
+      margin-bottom: 2rem;
+      font-size: 1.5rem; }
+    .cantidadJugadores .botones #jugadores3 {
+      font-size: 1.5rem; }
 
 .salida {
   margin-top: -5rem;
@@ -70,15 +73,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: -32rem;
+    margin-top: -45rem;
     width: 100%; }
     #nombres .col .ingresarNombres {
-      width: 19rem;
+      width: 27rem;
       margin-bottom: 1rem;
       font-weight: 500;
-      font-size: large; }
+      font-size: 1.5rem; }
     #nombres .col .form-control {
-      width: 30vw; }
+      width: 30vw;
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      background-color: rgba(200, 200, 200, 0.564); }
     #nombres .col #aceptar {
       margin-top: 1rem; }
       #nombres .col #aceptar .aceptar {
@@ -97,8 +103,8 @@
   .contenedor .encabezado {
     background-color: rgba(21, 21, 21, 0.656);
     color: white;
-    max-width: 35rem;
-    height: 24rem;
+    max-width: 45rem;
+    height: 30rem;
     justify-content: center;
     margin-top: 4rem;
     margin-left: 25%;
@@ -109,12 +115,12 @@
       margin-left: 2rem;
       text-align: left; }
     .contenedor .encabezado .jugador {
-      margin-right: 2rem;
+      margin-right: 5rem;
       text-align: right;
-      margin-top: -2rem; }
+      margin-top: -1rem; }
     .contenedor .encabezado .pregunta {
-      margin-top: 2rem;
-      margin-bottom: 3rem; }
+      margin-top: 4rem;
+      margin-bottom: 5rem; }
     .contenedor .encabezado .opciones {
       margin-left: 2rem;
       margin-right: 2rem;
