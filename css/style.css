@@ -19,7 +19,8 @@
   background-image: url(../../imagenFondo/fondo-1.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
-  object-fit: cover; }
+  object-fit: cover;
+  overflow: hidden; }
   .fondo h1 {
     font-weight: 400;
     font-size: 6rem;
@@ -47,13 +48,13 @@
     font-weight: 500;
     text-align: center;
     margin: 3rem;
-    margin-top: 10rem; }
+    margin-top: 8rem; }
   .cantidadJugadores .botones {
     display: flex;
     flex-direction: column;
     align-items: center; }
     .cantidadJugadores .botones #jugadores2 {
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
       font-size: 1.5rem; }
     .cantidadJugadores .botones #jugadores3 {
       font-size: 1.5rem; }
@@ -73,7 +74,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: -45rem;
     width: 100%; }
     #nombres .col .ingresarNombres {
       width: 27rem;
@@ -135,3 +135,17 @@
         background-color: #999b9be6; }
       .contenedor .encabezado .opciones #opcion3 {
         background-color: #c4c6c6; }
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  .fondo .boton {
+    font-size: 2rem;
+    margin: 5rem; }
+    .fondo .boton .init {
+      color: white;
+      text-decoration: none; } }
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  .contenedor {
+    background-size: 135% 100%; }
+    .contenedor .encabezado {
+      margin-left: 15%; } }

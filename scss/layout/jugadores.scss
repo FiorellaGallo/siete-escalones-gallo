@@ -12,7 +12,7 @@
         font-weight: 500;
         text-align: center;
         margin: 3rem;
-        margin-top: 10rem;
+        margin-top: 8rem;
 
     }
 
@@ -20,10 +20,11 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        
        
 
         #jugadores2 {
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
             font-size: 1.5rem;
         }
 
@@ -56,8 +57,8 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: -45rem;
         width: 100%;
+        
 
         .ingresarNombres {
             width: 27rem;

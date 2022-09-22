@@ -108,15 +108,26 @@ function continuarJuego() {
 
     if (perdieron == true) {
         if (jugadores[jugadorActual - 1].preguntaAnterior === true) {
+            swal({ 
+                title:"¡¡FELICITACIONES!!",
+                text:"Has ganado",
+                buttons: false,
+                timer:10000,    
+            });
             setTimeout(() => {
-                alert("¡¡¡¡FELICITACIONES!!!! GANASTE");
                 location.replace("/");
-            }, 1000);
+            }, 2000);
+            
         } else {
+            swal({
+                title:"¡¡FIN DEL JUEGO!!",
+                text:"Perdieron todos",
+                buttons: false,
+                timer:10000,  
+            });
             setTimeout(() => {
-                alert("PERDIERON TODOS");
                 location.replace("/");
-            }, 1000);
+            }, 2000);
         }
     }
 }
@@ -144,6 +155,7 @@ function recargarPregunta(nombreJugador, numero) {
     tituloPregunta.innerHTML = pregunta;
 
     const arrayOpciones = opciones.split(/\r?\n/);
+    console.log(arrayOpciones);
     opcion1.innerHTML = arrayOpciones[0];
 
     opcion2.innerHTML = arrayOpciones[1];
