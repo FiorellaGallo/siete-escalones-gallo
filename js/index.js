@@ -23,7 +23,7 @@ function escribirNombres() {
 
 let jugadores;
 let arrayJugadores = Array();
-let arrayPreguntas = retornarPregunta();
+
 
 function participara(event) {
 

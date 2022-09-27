@@ -1,13 +1,21 @@
-let preguntas = retornarPregunta();
+const getPreguntas = async() => {
+    const resp = await
+    fetch("../data/preguntas.json")
+    const data = await resp.json()
+    return(data)
+}
+
+let preguntas ;
 let min = 0;
-let max = preguntas.length - 1;
+let max = 39 - 1;
 let numeroPregunta = Math.floor(Math.random() * (max - min + 1) + min); // genero numero aleatorio
 let jugadores = localStorage.getItem("jugadores");
 jugadores = JSON.parse(jugadores);
 localStorage.setItem("escalon", 0);
 let escalonNum = 0;
 
-window.addEventListener("load", function () {
+window.addEventListener("load", async() => {
+    preguntas = await getPreguntas();
     const{pregunta,opciones,respuesta} = preguntas[numeroPregunta]; // accedo por posiciòn dentro array que contiene los objetos pregunta
     let escalon = document.getElementById("escalon");
     escalon.innerHTML = `Escalón : ${escalonNum} `;
@@ -20,7 +28,7 @@ window.addEventListener("load", function () {
 
     const tituloPregunta = document.querySelector("#pregunta");
     tituloPregunta.innerHTML = pregunta;
-
+    
     const opcion1 = document.querySelector("#opcion1");
     const arrayOpciones = opciones.split(/\r?\n/);
     opcion1.innerHTML = arrayOpciones[0];
