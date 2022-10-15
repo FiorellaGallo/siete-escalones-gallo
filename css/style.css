@@ -16,23 +16,25 @@
   padding: 0; }
 
 .fondo {
-  background-image: url(../../imagenFondo/fondo-1.jpg);
+  background-image: url(../../imagenFondo/fondo-1.png);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 100% 100%;
   object-fit: cover;
   overflow: hidden; }
   .fondo h1 {
-    font-weight: 400;
-    font-size: 6rem;
+    font-weight: 500;
+    font-size: 5rem;
     font-family: 'Figtree', sans-serif;
-    text-align: center;
+    text-align: left;
+    padding-left: 2rem;
     color: rgba(32, 31, 31, 0.822);
     padding-top: 8%;
     padding-right: 50%;
     box-shadow: 0px 0px 30px black; }
   .fondo .boton {
-    font-size: 3rem;
-    margin: 15rem; }
+    font-size: 2.8rem;
+    margin: 8rem;
+    margin-top: 8rem; }
     .fondo .boton .init {
       color: white;
       text-decoration: none; }
@@ -77,7 +79,7 @@
     width: 100%; }
     #nombres .col .ingresarNombres {
       width: 27rem;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
       font-weight: 500;
       font-size: 1.5rem; }
     #nombres .col .form-control {
@@ -86,7 +88,7 @@
       margin-top: 1rem;
       background-color: rgba(200, 200, 200, 0.564); }
     #nombres .col #aceptar {
-      margin-top: 1rem; }
+      margin-top: 0.5rem; }
       #nombres .col #aceptar .aceptar {
         color: #090808;
         text-decoration: none; }
@@ -94,21 +96,20 @@
 .contenedor {
   display: flex;
   flex-direction: column;
-  background-image: url(../../imagenFondo/fondo-3.jpg);
+  background-image: url(../../imagenFondo/fondo-mobile-preguntas.jpg);
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: 100%;
   justify-content: center;
   justify-items: center;
   text-align: center; }
   .contenedor .encabezado {
-    background-color: rgba(21, 21, 21, 0.656);
+    background-color: rgba(0, 0, 0, 0.767);
     color: white;
-    max-width: 45rem;
-    height: 30rem;
+    max-width: 50rem;
+    height: 32rem;
     justify-content: center;
-    margin-top: 4rem;
+    margin-top: 3rem;
     margin-left: 25%;
-    box-shadow: 1rem 1rem 3rem rgba(59, 59, 59, 0.615);
     border-radius: 0.5rem; }
     .contenedor .encabezado .escalonCero {
       margin-top: 2rem;
@@ -119,9 +120,11 @@
       text-align: right;
       margin-top: -1rem; }
     .contenedor .encabezado .pregunta {
+      font-size: 1.3rem;
       margin-top: 4rem;
       margin-bottom: 5rem; }
     .contenedor .encabezado .opciones {
+      font-size: 1.2rem;
       margin-left: 2rem;
       margin-right: 2rem;
       flex-direction: column;
@@ -139,7 +142,7 @@
 @media (min-width: 481px) and (max-width: 1024px) {
   .fondo .boton {
     font-size: 2rem;
-    margin: 5rem; }
+    margin: 4rem; }
     .fondo .boton .init {
       color: white;
       text-decoration: none; } }
@@ -149,3 +152,50 @@
     background-size: 135% 100%; }
     .contenedor .encabezado {
       margin-left: 15%; } }
+
+@media (max-width: 480px) {
+  .fondo {
+    object-fit: cover;
+    background-image: url(../../imagenFondo/fondo-mobile-index.png);
+    background-size: 100% 100%;
+    overflow: hidden; }
+    .fondo h1 {
+      font-size: 3.5rem;
+      font-weight: 50;
+      padding-top: 10%;
+      padding-right: 0%; }
+    .fondo .boton {
+      font-size: 1.5rem;
+      margin-left: 2rem;
+      margin-top: 4rem; } }
+
+@media (max-width: 480px) {
+  .salida {
+    margin-top: -8rem;
+    margin-left: 2rem; }
+  #nombres .col .ingresarNombres {
+    width: 20rem;
+    margin-left: 5rem; }
+  #nombres .col .form-control {
+    width: 68vw;
+    margin-left: 2rem; }
+  #nombres .col #aceptar {
+    margin-top: 1rem;
+    margin-left: 2rem; } }
+
+@media (max-width: 480px) {
+  .contenedor {
+    background-image: url(../../imagenFondo/fondo-mobile-preguntas.jpg);
+    background-size: 150% 100%;
+    overflow: hidden; }
+    .contenedor .encabezado {
+      margin-left: 5%;
+      margin-top: 0rem;
+      max-width: 22rem; }
+      .contenedor .encabezado .pregunta {
+        font-size: 1rem; }
+      .contenedor .encabezado .opciones {
+        font-size: 1rem; }
+      .contenedor .encabezado .jugador {
+        margin-top: -1.5rem;
+        margin-right: 3rem; } }

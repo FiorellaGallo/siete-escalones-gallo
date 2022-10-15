@@ -1,0 +1,26 @@
+@media(max-width: 480px){
+    .contenedor{
+        background-image: url(../../imagenFondo/fondo-mobile-preguntas.jpg);
+        background-size: 150% 100%;
+        overflow: hidden;
+
+        .encabezado{
+            margin-left: 5%;
+            margin-top: 0rem;
+            max-width: 22rem;
+
+            .pregunta{
+                font-size: 1rem;
+            }
+
+            .opciones{
+                font-size: 1rem;
+            }
+
+            .jugador{
+                margin-top: -1.5rem;
+                margin-right: 3rem;
+            }
+        }
+    }
+}

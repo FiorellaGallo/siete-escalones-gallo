@@ -1,0 +1,27 @@
+@media(max-width: 480px){
+    
+    .salida{
+        margin-top: -8rem;
+        margin-left: 2rem;
+    }
+
+    #nombres{
+        .col{
+
+            .ingresarNombres{
+                width: 20rem;
+                margin-left: 5rem;
+            
+            }
+            .form-control{
+                width: 68vw;
+                margin-left: 2rem;
+
+            }
+            #aceptar{
+                margin-top: 1rem;
+                margin-left: 2rem;
+            }
+        }
+    }
+}

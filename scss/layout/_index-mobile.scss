@@ -1,0 +1,23 @@
+@media(max-width: 480px){
+    .fondo{
+        object-fit: cover;
+        background-image:url(../../imagenFondo/fondo-mobile-index.png);
+        background-size: 100% 100% ;
+        overflow: hidden;
+
+        h1{
+            font-size: 3.5rem;
+            font-weight: 50;
+            padding-top: 10%;
+            padding-right:0%;
+           
+
+        }
+    
+        .boton{
+            font-size: 1.5rem;
+            margin-left: 2rem;
+            margin-top: 4rem;   
+        }    
+    }   
+}

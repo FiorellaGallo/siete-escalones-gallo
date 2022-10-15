@@ -4,9 +4,11 @@
 @import'./componentes/extend.scss';
 
 //layout
-@import './layout/index.scss';
-@import'./layout/jugadores.scss';
-@import'./layout/preguntas.scss';
-@import'./layout/index-tablet.scss';
-@import'./layout/preguntas-tablet.scss';
-
+@import './layout/index';
+@import'./layout/jugadores';
+@import'./layout/preguntas';
+@import'./layout/index-tablet';
+@import'./layout/preguntas-tablet';
+@import'./layout/index-mobile';
+@import'./layout/jugadores-mobile';
+@import'./layout/preguntas-mobile';
